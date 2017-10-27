@@ -1,6 +1,6 @@
 package com.lullu.test.lock;
 
-import com.lulu.model.OutPutter1;
+import com.lulu.model.OutPutter;
 
 /**
  * lock锁测试
@@ -8,20 +8,20 @@ import com.lulu.model.OutPutter1;
 public class LockTest {
 
     public static void main(String[] args) {
-        OutPutter1 outPutter1 = new OutPutter1();
-//        OutPutter1 outPutter = new OutPutter1();
+        OutPutter outPutter = new OutPutter();
+//        OutPutter outPutter = new OutPutter();
        //开启一个线程
         new Thread(){
             @Override
             public void run() {
-                outPutter1.output("1");
+                outPutter.output("1");
             }
         }.start();
         //开启第二个线程
         new Thread(){
             @Override
             public void run() {
-                outPutter1.output("2");
+                outPutter.output("2");
             }
         }.start();
 

@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * Created by Administrator on 2017/10/27.
  */
-public class OutPutter1 {
+public class OutPutter {
     //锁对象
     private  ReentrantLock  lock = new ReentrantLock();
 
