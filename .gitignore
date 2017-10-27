@@ -1,0 +1,10 @@
+target
+.settings
+.classpath
+.project
+*.iml
+.idea
+gat-logs
+logs
+userdoor_test.db
+*.log*
