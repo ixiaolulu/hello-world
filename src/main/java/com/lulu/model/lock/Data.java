@@ -1,4 +1,4 @@
-package com.lulu.model;
+package com.lulu.model.lock;
 
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;

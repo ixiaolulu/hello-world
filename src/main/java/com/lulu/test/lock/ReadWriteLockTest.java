@@ -1,6 +1,6 @@
-package com.lullu.test.lock;
+package com.lulu.test.lock;
 
-import com.lulu.model.Data;
+import com.lulu.model.lock.Data;
 
 import java.util.Random;
 
