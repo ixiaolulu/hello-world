@@ -11,5 +11,8 @@ public class PersonProxyCglibTest {
         PersonProxyCglib cglib = new PersonProxyCglib();
         Person person = (Person) cglib.getInstance(new Person());
         person.eat();
+
+        Person person1 = (Person) cglib.getProxy(Person.class);
+        person1.eat();
     }
 }

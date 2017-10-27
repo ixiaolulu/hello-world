@@ -31,6 +31,13 @@ public class PersonProxyCglib implements MethodInterceptor{
         return enhancer.create();
     }
 
+    /**
+     * 创建代理对象
+     */
+    public <T> T getProxy(Class<T> clz){
+        return (T)Enhancer.create(clz,this);
+    }
+
     public Object intercept(Object obj, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
         System.out.println("业务逻辑处理开始...");
         methodProxy.invokeSuper(obj, args);
