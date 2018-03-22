@@ -11,13 +11,18 @@ public class PersonProxyJDK implements InvocationHandler {
 
     private Object proxyObj;
 
-    public Object bind(Object proxyObj) {
+    public PersonProxyJDK(Object proxyObj){
         this.proxyObj = proxyObj;
-        return Proxy.newProxyInstance(proxyObj.getClass().getClassLoader(), proxyObj.getClass().getInterfaces(), this);
+    }
+
+    public PersonProxyJDK(){}
+
+
+    public Object bind(Object proxyObj) {
+        return Proxy.newProxyInstance(proxyObj.getClass().getClassLoader(), proxyObj.getClass().getInterfaces(), new PersonProxyJDK(proxyObj));
     }
 
 
-    @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         Object result = null;
         System.out.println("业务处理开始...");

@@ -10,7 +10,6 @@ public class PersonProxy implements Animal {
         this.person = person;
     }
 
-    @Override
     public void eat() {
         System.out.println("eat begin...");
         person.eat();
